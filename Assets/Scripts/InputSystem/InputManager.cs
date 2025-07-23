@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
+using Game.EventSystem;
+using Game.InputSystem.Events;
 
 namespace Game.InputSystem {
-	public class InputManager : MonoBehaviour {
-		public static InputManager Instance { get; private set; }
+    public class InputManager : MonoBehaviour {
+        public static InputManager Instance { get; private set; }
 
         private InputSystem_Actions inputActions;
 
@@ -25,12 +29,22 @@ namespace Game.InputSystem {
         private void OnEnable() {
             inputActions.Player.Enable();
             inputActions.UI.Enable();
+
+            inputActions.Player.Attack.performed += OnAttackPerformed;
+            inputActions.Player.Attack.canceled += OnAttackCancel;
         }
 
         private void OnDisable() {
             inputActions.Player.Disable();
             inputActions.UI.Disable();
+
+            inputActions.Player.Attack.performed -= OnAttackPerformed;
+            inputActions.Player.Attack.canceled -= OnAttackCancel;
         }
+
+        // ---------- Event Methods ----------
+        private void OnAttackPerformed(InputAction.CallbackContext callbackContext) { EventBus.Publish(new EVT_OnLeftMouseDown()); }
+        private void OnAttackCancel(InputAction.CallbackContext callbackContext) { EventBus.Publish(new EVT_OnLeftMouseUp()); }
 
 
         // ---------- Getters ----------
