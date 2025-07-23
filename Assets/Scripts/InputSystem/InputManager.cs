@@ -16,9 +16,6 @@ namespace Game.InputSystem {
             }
 
             Instance = this;
-        }
-
-        private void Start() {
             inputActions = new InputSystem_Actions();
         }
 
