@@ -659,30 +659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4440576650146054161, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
-      propertyPath: duration
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4440576650146054161, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
-      propertyPath: destinationY
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4440576650146054161, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
-      propertyPath: maxWobbleAmount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5316005146755292417, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
       propertyPath: m_Name
       value: Bubble
       objectReference: {fileID: 0}
-    - target: {fileID: 5316005146755292417, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6322653071841410649, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 7260619227025529843, guid: f9f8fdbfd02e6ba4db120cc0160e678d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.09
